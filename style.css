@@ -155,3 +155,22 @@ header span{
 .vClick{
   background-color: #38404B;
 }
+
+@media(min-width:480px){
+  .lista{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-around;
+  }
+
+  .TaskCompleta{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-around;
+  }
+
+  .Task{
+    margin: 20px 20px;
+    font-size: 90%;
+  }
+}
