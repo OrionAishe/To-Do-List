@@ -1,10 +1,11 @@
 
 #app{
-background-color: darkslategray;
+background-color: #38404B;
 border-radius: 40px;
 height: 90vh;
 padding: 30px;
-color: cadetblue;
+color: #94ADCF;
+font-family: 'Montserrat';
 }
 
 header{
@@ -20,10 +21,10 @@ nav{
   flex-direction: column;
 }
 
-span{
+header span{
   width: 90%;
   height: 3px;
-  background-color: cadetblue;
+  background-color: #94ADCF;
   border-radius: 10px;
   margin: 3px;
 }
@@ -45,5 +46,112 @@ span{
 }
 
 .blur{
-  filter: blur(5px);
+  filter: blur(2px);
+}
+
+.button{
+  height: 5vh;
+  border-radius: 10px;
+  background-color: #38404B;
+  box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(0, 0, 0, 0.225), inset -0.2em -0.2em 0.2em 0 rgba(255, 255, 255, 0.077);
+  display: flex;
+  justify-content: space-between;
+  color: #94ADCF;
+}
+
+.text{
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  color: #94ADCF;
+  padding-left: 15px;
+}
+
+::placeholder{
+  color: #94ADCF;
+}
+
+.button button{
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: #94ADCF;
+  font-weight: bolder;
+  font-size: 100%;
+}
+
+.button2{
+  display: none;
+}
+
+.lista{
+  padding: 0;
+}
+
+.Task span{
+  width: 10px;
+  height: 10px;
+  border: 2px solid #94ADCF;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.Task{
+  display: flex;
+  height: 4vh;
+  justify-items: flex-start;
+  align-items: center;
+  font-weight: bolder;
+  margin: 20px 0;
+  box-shadow: -5px 5px 10px rgba(48, 54, 64, 0.2), 5px -5px 10px rgba(48, 54, 64, 0.2), -5px -5px 10px rgba(64, 74, 86, 0.9), 5px 5px 13px rgba(48, 54, 64, 0.9), inset 1px 1px 2px rgba(64, 74, 86, 0.3), inset -1px -1px 2px rgba(48, 54, 64, 0.5);
+}
+
+.TaskCompleta{
+  padding: 0;
+}
+
+.TaskCompleta li{
+  text-decoration: line-through;
+}
+
+.TaskCompleta span{
+  background-color: #94ADCF;
+}
+
+.Add{
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  right: 10%;
+  bottom: 10%;
+  background-color: #38404B;
+  border-radius: 50px;
+  box-shadow: -1px 1px 2px rgba(22, 26, 30, 0.2), 1px -1px 2px rgba(22, 26, 30, 0.2), -1px -1px 2px rgba(90, 102, 120, 0.9), 1px 1px 3px rgba(22, 26, 30, 0.9), inset 1px 1px 2px rgba(90, 102, 120, 0.3), inset -1px -1px 2px rgba(22, 26, 30, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AddClick{
+  background-color: #94ADCF;
+  box-shadow: -1px 1px 2px rgba(22, 26, 30, 0.2), 1px -1px 2px rgba(22, 26, 30, 0.2), -1px -1px 2px rgba(90, 102, 120, 0.9), 1px 1px 3px rgba(22, 26, 30, 0.9), inset 1px 1px 2px rgba(90, 102, 120, 0.3), inset -1px -1px 2px rgba(22, 26, 30, 0.5);
+}
+
+.v{
+  width: 50px;
+  height: 5px;
+  background-color: #94ADCF;
+  position: absolute;
+  border-radius: 50px;
+}
+
+.h{
+  width: 5px;
+  height: 50px;
+  background-color: #94ADCF;
+  position: absolute;
+  border-radius: 50px;
+}
+
+.vClick{
+  background-color: #38404B;
 }
