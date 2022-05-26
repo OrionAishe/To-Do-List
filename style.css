@@ -174,3 +174,51 @@ header span{
     font-size: 90%;
   }
 }
+
+@media(min-width:1024px){
+  .title{
+    display: none;
+  }
+
+  nav{
+    position: absolute;
+    right: 50px;
+  }
+
+  .button{
+    position: relative;
+    width: 50vw;
+    left: 25%;
+  }
+
+  .NovaTask{
+    display: block;
+    width: 50%;
+    text-align: center;
+  }
+
+  .button1{
+    display: none;
+  }
+
+  .button2{
+    display: block;
+  }
+
+  .lista{
+    grid-template-columns: 30% 30% 30%;
+  }
+
+  .TaskCompleta{
+    grid-template-columns: 30% 30% 30%;
+  }
+
+  .Task{
+    margin: 10px 10px;
+  }
+  
+  .Add{
+    display: none;
+  }
+
+}
