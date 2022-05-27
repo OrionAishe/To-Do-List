@@ -97,6 +97,7 @@ header span{
 
 .Task{
   display: flex;
+  text-transform: capitalize;
   height: 4vh;
   justify-items: flex-start;
   align-items: center;
