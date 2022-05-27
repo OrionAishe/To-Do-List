@@ -37,7 +37,7 @@ function Adicionar1() {
     Task = document.querySelector(".text").value;
     document.querySelector(".text").value = "";
     Tasks = document.querySelector(".lista");
-    TaskVazia(Task, Tasks);
+    TaskVazia(Task, Tasks)
     NovaTask();
 }
 
@@ -45,27 +45,71 @@ function Adicionar2() {
     Task = document.querySelector(".text").value;
     document.querySelector(".text").value = "";
     Tasks = document.querySelector(".lista");
-    TaskVazia(Task, Tasks);
+    TaskVazia(Task, Tasks)
 }
 
-function TaskVazia(Task, Tasks){
+function TaskVazia(Task, Tasks) {
     if (Task != "") {
         let li = document.createElement("li");
         let span = document.createElement("span");
         li.appendChild(span);
         li.appendChild(document.createTextNode(Task));
-        li.classList.add("Task")
+        li.classList.add("Task");
+        li.classList.add("Incomplete")
         Tasks.appendChild(li);
-        li.addEventListener('click', ()=> {TarefaCompleta(li)});
+        li.addEventListener('click', () => { TarefaCompleta(li) });
+        Undone();
     }
     return;
 }
 
 function TarefaCompleta(Tarefa) {
     Tarefa.classList.toggle("Completo");
+    Tarefa.classList.toggle("Incomplete")
     if (Tarefa.parentElement.className == "TaskCompleta") {
         document.querySelector(".lista").appendChild(Tarefa);
+        Undone();
     } else {
         document.querySelector(".TaskCompleta").appendChild(Tarefa);
+        Complete();
     }
+}
+
+function Undone() {
+    TaskCompleted = document.querySelectorAll(".Incomplete");
+    Tasks = document.querySelector(".lista");
+    let innerhtml = [];
+    TaskCompleted.forEach((element, index) => {
+        innerhtml[index] = element.textContent;
+        element.remove();
+    });
+    innerhtml.sort();
+    innerhtml.forEach((element) => {
+        Rearrange(element, Tasks, "Incomplete");
+    });
+}
+
+function Complete() {
+    TaskCompleted = document.querySelectorAll(".Completo");
+    Tasks = document.querySelector(".TaskCompleta");
+    let innerhtml = [];
+    TaskCompleted.forEach((element, index) => {
+        innerhtml[index] = element.textContent;
+        element.remove();
+    });
+    innerhtml.sort();
+    innerhtml.forEach((element) => {
+        Rearrange(element, Tasks, "Completo");
+    });
+}
+
+function Rearrange(Task, Tasks, Classe){
+    let li = document.createElement("li");
+    let span = document.createElement("span");
+    li.appendChild(span);
+    li.appendChild(document.createTextNode(Task));
+    li.classList.add(Classe);
+    li.classList.add("Task");
+    Tasks.appendChild(li);
+    li.addEventListener('click', () => { TarefaCompleta(li) });
 }
